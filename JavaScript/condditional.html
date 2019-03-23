@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Conditional operator test app
+        </title>
+    </head>
+    
+    <body>
+        <script>
+            alert("Contional operator testing");
+            let name = prompt("Enter login details : ");
+            let pass = prompt("Enter password: ");
+            if( name === "abc" && pass === "xyz")
+            {
+                console.log("Expected name = " + name + ", pass = " + pass);
+            }
+            else
+                console.log("UnExpected name = " + name + ", pass = " + pass);
+            
+            if(name == ""  || pass== "")
+                console.log("name or pass is blank- " + name + ", pass = " + pass);
+            
+            
+            let b = 21;
+            let c = 0x14;
+            if(b == c)
+            {
+                console.log("b==c true");                
+            }
+            else
+            {
+                console.log("b!=c true");
+            }
+            
+            let d = "20";
+            if(c==d)
+            {
+                console.log("c==d true");
+            }
+            if(c!==d)
+                console.log("c!==d true");
+            
+            
+            let comp = (c==d) ? "TRUE" : "FALSE";
+            console.log("value of comp == " + comp);
+            
+            comp = (c===d) ? "TRUE" : "FALSE";
+            console.log("value of comp === is " + comp)
+            
+            
+        </script>
+    </body>
+</html>
+    

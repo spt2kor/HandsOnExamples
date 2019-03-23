@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Object Example exercise
+        </title>
+    </head>
+    <body>
+        <h1>printing different objects</h1>
+        <p id='1'>p1</p>
+        <p id='2'>p2</p>
+        <p id='4' onMouseOver="document.getElementById('5').innerHTML='MouseOver'"
+                  onClick="document.getElementById('5').innerHTML='mouseClick'">p4</p>
+        <p id='3'>p3</p>
+        <p id='5'>p5</p>
+        <p id='6'>p6</p>
+
+        <script>
+            //https://www.w3schools.com/js/js_arrays.asp
+            let name = "shailendra";
+            document.getElementById('4').innerHTML = name.length;
+            document.getElementById('5').innerHTML = name.replace(/LEN/i,'123');//Note that regular expressions are written without quotes.
+            var person = {
+                fname:'shailendra',
+                lname:'Rajput',
+                age:35,
+                fullname: function (){
+                   return this.fname + ' ' + this.lname;
+                   //return fname + ' ' + lname;
+                    }
+                };
+            var personfn ={
+                fullname: function(){
+                    return this.fname + '  ' + this.lname;
+                }
+            };
+            document.getElementById('1').innerHTML = person.fname + '-' + person.age + '-' + person.fullname();
+
+            document.getElementById('2').innerHTML = person.fname + '-' + person.age + '-' + person.fullname;
+
+            document.getElementById('3').innerHTML = 'using call : ' + personfn.fullname.call(person);
+        </script>
+    </body>
+
+</html>

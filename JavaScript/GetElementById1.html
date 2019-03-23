@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Element by ID handson </title>
+    </head>
+    <body>
+        <h2> testing Get Element by ID</h2>
+        <p id='para' > Place which is getting replace on click</p>
+        <button type='button' onClick='RunScript()'>Run Script</button><br/>
+        <button type='button' onClick='Reset()'>Reset</button> <br>
+        <button type='button' onclick='document.getElementById("para").innerHTML = "Bye Bye"' > Bye</button>
+        <script>
+            var value = document.getElementById('para').innerHTML;
+            console.log('Script Started');
+            document.write('RunScript Executed !');
+            function RunScript(){
+                document.getElementById('para').innerHTML="All the Best!";
+                document.write('RunScript Executed !');
+            }
+            function Reset(){
+                document.getElementById('para').innerHTML = value;
+                window.alert('Clicked Reset Button');
+            }
+            //https://www.w3schools.com/js/js_output.asp
+            //https://www.w3schools.com/charsets/ref_html_utf8.asp
+            //https://www.w3schools.com/js/js_arithmetic.asp
+        </script>
+    </body>
+</html>
